@@ -34,6 +34,9 @@ let LAIKA_movies = [
 
 
 /*Practica 06/10/2026*/
+
+/*Para que todo funcione correctamente debe llamar primero la funcion de Crear*/
+
 console.log(LAIKA_movies);
 
 
@@ -59,7 +62,7 @@ function Leer(name) {
 function Actualizar() {
     let ListaActualizada = LAIKA_movies.map(Pelicula => {
         return Pelicula.name === "Wildwood" ?
-        {...Pelicula, description: "Wildwood es la proxima y mas ambiciosa pelicula de LAIKA y se estrenara en cotubre del 2026."}
+        {...Pelicula, description: "Wildwood es la proxima y mas ambiciosa pelicula de LAIKA y se estrenara en octubre del 2026."}
         : Pelicula;
     });
     console.log(ListaActualizada);
@@ -73,6 +76,7 @@ function Borrar() {
 
 
 /*Practica 01/09/2026*/
+
 /*forEach
 let existe = false;
 
