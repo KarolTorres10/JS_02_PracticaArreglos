@@ -32,15 +32,47 @@ let LAIKA_movies = [
 },
 ];
 
-let nuevo = [
-    {
-        name: "Wildwood",
-        genero: "Fantasia",
-        ano: 2026,
-        description: "Una aventura mágica en un bosque encantado lleno de criaturas extraordinarias y misterios por descubrir."
-    }
-];
 
+/*Practica 06/10/2026*/
+console.log(LAIKA_movies);
+
+
+function Crear() {
+    let nuevo = [
+        {
+            name: "Wildwood",
+            genero: "Fantasia",
+            ano: 2026,
+            description: "Una aventura mágica en un bosque encantado lleno de criaturas extraordinarias y misterios por descubrir."
+        }
+    ];
+
+    LAIKA_movies.push(...nuevo);
+    console.log("La nueva pelicula se ha agregado con exito!");
+}
+
+function Leer(name) {
+    let genero_fantasia = LAIKA_movies.filter((Pelicula) => Pelicula.genero === "Fantasia");
+    console.log(genero_fantasia);
+}
+
+function Actualizar() {
+    let ListaActualizada = LAIKA_movies.map(Pelicula => {
+        return Pelicula.name === "Wildwood" ?
+        {...Pelicula, description: "Wildwood es la proxima y mas ambiciosa pelicula de LAIKA y se estrenara en cotubre del 2026."}
+        : Pelicula;
+    });
+}
+
+function Borrar() {
+    let borrar_fantasia = LAIKA_movies.filter((Pelicula) => Pelicula.genero !== "Fantasia");
+    console.log(borrar_fantasia);
+}
+
+
+
+/*Practica 01/09/2026*/
+/*forEach
 let existe = false;
 
 LAIKA_movies.forEach(peli => {
@@ -54,20 +86,21 @@ if(!existe){
 }
 
 console.log(LAIKA_movies);
+*/
 
-
-/*Filter*/
+/*Filter
 let genero_fantasia = LAIKA_movies.filter((Pelicula) => Pelicula.genero === "Fantasia");
     console.log(genero_fantasia);
+*/    
     
-    
-/*Find*/
+/*Find
 let genero_Aventura = LAIKA_movies.find((Pelicula) => Pelicula.genero === "Aventura");
     console.log(genero_Aventura);
+*/
 
 
 
-/* Ejercicio 29/09/2026
+/*Practica 29/09/2026
 
 console.log(LAIKA_movies[0].name);
 console.log(LAIKA_movies[1].genero);
