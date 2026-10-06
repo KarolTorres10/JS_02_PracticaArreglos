@@ -62,6 +62,7 @@ function Actualizar() {
         {...Pelicula, description: "Wildwood es la proxima y mas ambiciosa pelicula de LAIKA y se estrenara en cotubre del 2026."}
         : Pelicula;
     });
+    console.log(ListaActualizada);
 }
 
 function Borrar() {
